@@ -3,7 +3,7 @@
 
 (def A [])
 (def init-value 2)
-(def init-size (+ (* 10 (int (with-precision 100 :FLOOR (/ n-value 3)))) 1))
+(def init-size (+ (int (with-precision 100 :FLOOR(* 10  (/ n-value 3)))) 1))
 
 (defn regular-form [orig]
   (def result ())
@@ -36,7 +36,6 @@
 
 ;(println init-size)
 ;(println A)
-;(println (count A))
 ;(println (first(regular-form A)))
 
 (def nines 0)
@@ -48,6 +47,8 @@
     (def A (conj (rest A) (mod (last combo) 10)))
     (def q (int (/ (last combo) 10)))
 
+
+    ;(println (count A))
     ;(println "A =" A)
     ;(println "q =" q)
     ;(println "nines = " nines)
